@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85F67558-D46C-44B3-9E27-B3C3FC94EF31}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Flatness</RootNamespace>
+    <AssemblyName>Flatness</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F2A57F41D361B3BCD88A048ECA4A01D389C4ABAC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Flatness_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.cs" />
+    <Compile Include="ID\AxisId.cs" />
+    <Compile Include="ID\CardId.cs" />
+    <Compile Include="ID\DiId.cs" />
+    <Compile Include="ID\DoId.cs" />
+    <Compile Include="ID\TaskId.cs" />
+    <Compile Include="Page\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageAlarm.Designer.cs">
+      <DependentUpon>pageAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageCamera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageCamera.Designer.cs">
+      <DependentUpon>pageCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageChart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageChart.Designer.cs">
+      <DependentUpon>pageChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\pageDebug.Designer.cs">
+      <DependentUpon>pageDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageEngineer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageEngineer.Designer.cs">
+      <DependentUpon>pageEngineer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageGRR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageGRR.Designer.cs">
+      <DependentUpon>pageGRR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageInfo.Designer.cs">
+      <DependentUpon>pageInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageLogin.Designer.cs">
+      <DependentUpon>pageLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageProduct.Designer.cs">
+      <DependentUpon>pageProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\pageSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Page\pageSetting.Designer.cs">
+      <DependentUpon>pageSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Welcom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Page\Welcom.Designer.cs">
+      <DependentUpon>Welcom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Params\CalibrationParams.cs" />
+    <Compile Include="Params\MotionParams.cs" />
+    <Compile Include="Params\ParmsFactory.cs" />
+    <Compile Include="Params\UserParams.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task\测量模块.cs" />
+    <EmbeddedResource Include="Page\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageAlarm.resx">
+      <DependentUpon>pageAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageCamera.resx">
+      <DependentUpon>pageCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageChart.resx">
+      <DependentUpon>pageChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageDebug.resx">
+      <DependentUpon>pageDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageEngineer.resx">
+      <DependentUpon>pageEngineer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageInfo.resx">
+      <DependentUpon>pageInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageLogin.resx">
+      <DependentUpon>pageLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageProduct.resx">
+      <DependentUpon>pageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\pageSetting.resx">
+      <DependentUpon>pageSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Page\Welcom.resx">
+      <DependentUpon>Welcom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_alarmH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_alarmL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_bozhon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_deleteFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_lampBlue20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_lampOrange20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_lampRed20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_newFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_org.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_teach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_userAdmin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_userOp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_wait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_lampGray20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_lampGreen20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_rotate_antiClock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_rotate_clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenExcel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_alarmH1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_done.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_bozhon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XCore\XCore.csproj">
+      <Project>{017103d9-2d61-4d7a-95db-739c523ff470}</Project>
+      <Name>XCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
