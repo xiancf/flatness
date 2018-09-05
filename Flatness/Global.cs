@@ -56,7 +56,7 @@ namespace Flatness
             XDevice.Instance.BingDo((int)CardId.AMP208C1, (int)DoId.蜂鸣器, 11, 0, DoId.蜂鸣器.ToString(), CardId.AMP208C1.ToString());
             XDevice.Instance.BingDo((int)CardId.AMP208C1, (int)DoId.黄灯, 12, 0, DoId.黄灯.ToString(), CardId.AMP208C1.ToString());
         }
-        public static void BindTask()
+        public static void BindTask()            //
         {
             XTaskManage.Instance.BindTask((int)TaskId.任务0_测量模块, new 测量模块(), TaskId.任务0_测量模块.ToString());
             XTaskManage.Instance.BindTask((int)TaskId.任务1_支撑模块, new 测量模块(), TaskId.任务1_支撑模块.ToString());
